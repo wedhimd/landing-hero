@@ -12,7 +12,7 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color: #777;
-  padding: 20px;
+  padding: 17px;
 }
 
 .header {
@@ -25,5 +25,45 @@ body {
     url("https://images.unsplash.com/photo-1657883509333-0b1d2ee75853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=60");
   background-size: cover;
   background-position: top;
+  background-repeat: no-repeat;
+  position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
+}
+
+.logo-box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.logo {
+  height: 60px;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 10px;
+  text-align: center;
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 6px;
+  text-align: center;
 }
