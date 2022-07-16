@@ -50,6 +50,7 @@ body {
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+  backface-visibility: hidden;
 }
 
 .heading-primary--main {
@@ -58,6 +59,9 @@ body {
   font-weight: 700;
   letter-spacing: 10px;
   text-align: center;
+
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: moveInLeft 1s ease-out;
 }
 
 .heading-primary--sub {
@@ -66,4 +70,35 @@ body {
   font-weight: 500;
   letter-spacing: 6px;
   text-align: center;
+
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
